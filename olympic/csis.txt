@@ -1,0 +1,19 @@
+Competitors by lane are
+*************************************************
+Lane: 1 Name: Emmylou Harris Time: 12
+*************************************************
+Lane: 2 Name: Nanci Griffith Time: 12.8
+*************************************************
+Lane: 3 Name: Bonnie Raitt Time: 11
+*************************************************
+Lane: 4 Name: Joni Mitchell Time: 10.3
+
+Winners are:
+*************************************************
+Lane: 4 Name: Joni Mitchell Time: 10.3
+*************************************************
+Lane: 3 Name: Bonnie Raitt Time: 11
+*************************************************
+Lane: 1 Name: Emmylou Harris Time: 12
+*************************************************
+Lane: 2 Name: Nanci Griffith Time: 12.8

@@ -1,0 +1,30 @@
+*******************************************************************************
+Description:
+    This program makes use of friend functions and classes to showcase the 
+    value of their applications.
+
+Note:
+    In object calc we declared class calc_test as a friend so that calc_test 
+    will have access to necessary functions and variables in calc. calc_test is 
+    on object tests the implementation of calc class
+
+    the assert() functions will check the statement in the braces. If the expression
+    evaluates to true, then the program will continue running. 
+    If false, the program will terminate.
+
+    we also implemented function overloading by having a function to use integers
+    and a function to use doubles.
+
+    debugging the program shows us that the destructor is called at the end of the
+    program or whenever the object goes out of scope.
+
+    Order of Construction and Destruction:
+        ct: constructed
+        calc_test: constructed
+        ctest: constructed
+
+        ctest: desctructed
+        calc_test: desctructed
+        ct: desctructed
+
+

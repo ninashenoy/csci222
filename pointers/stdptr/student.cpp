@@ -1,0 +1,57 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//
+///////////////////////////////////////////////////////////////////////////////
+#include <string>
+#include <iostream>
+
+#include "student.h"
+
+using namespace std;
+
+///////////////////////////////////////////////////////////////////////////////
+Student::Student( std::string firstname, std::string lastname,
+                  Major major, double gpa )
+{
+    _first_name = firstname;
+    _last_name = lastname;
+    _GPA = gpa;
+    _major = major;
+
+}
+
+///////////////////////////////////////////////////////////////////////////////
+Student::~Student()
+{
+    //nothing to release or destroy
+}
+
+///////////////////////////////////////////////////////////////////////////////
+std::string Student::getFullName()
+{
+    std::string fullname = _first_name + " " + _last_name;
+    return fullname;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+double Student::getGPA()
+{
+    return _GPA;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+Student::Major Student::getMajor()
+{
+    return _major;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+void Student::printInfo()
+{
+    cout << "******************************************" << endl;
+    cout << "Full Name " << getFullName() << endl;
+    cout << "Major: " << _major << endl;
+    cout << "GPA: " << _GPA << endl;
+    cout << "******************************************" << endl;
+}
+

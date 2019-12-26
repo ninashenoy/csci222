@@ -1,0 +1,24 @@
+*******************************************************************************
+Description:
+This program is used as an example to generate assembly code.
+The command to generate assembly code from the command line is:
+    g++ -S main.cpp
+    outputs file to main.s, which contains the assembly instructions
+
+Note:
+    The print() function is overloaded, so there are 2 instances of
+    the function in assembly.
+
+    Notice the names of the print() function are mangled, but main
+    us not.
+    printi = takes an integer parameter
+    printc = takes a characte paramter
+
+    The global variables are declared in the global section of assembly
+
+    We have defined a function sleep() which takes a default value of 5.
+    We found one instance of the function in the assembly code.
+    sleep() is called twice in main, as sleep(1) and sleep(). In assembly, we 
+    see that there is a call to sleep where a value of one is pushed and a call
+    where a value of 5 is pushed.
+

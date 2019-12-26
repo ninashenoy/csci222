@@ -1,0 +1,63 @@
+-------------------------------------
+Trial #: 1
+Number of flushes: 26
+Number of pairs: 5360
+Percentage of flushes: 0.26%
+Percentage of pairs: 53.60%
+-------------------------------------
+Trial #: 2
+Number of flushes: 23
+Number of pairs: 5388
+Percentage of flushes: 0.23%
+Percentage of pairs: 53.88%
+-------------------------------------
+Trial #: 3
+Number of flushes: 20
+Number of pairs: 5381
+Percentage of flushes: 0.20%
+Percentage of pairs: 53.81%
+-------------------------------------
+Trial #: 4
+Number of flushes: 22
+Number of pairs: 5385
+Percentage of flushes: 0.22%
+Percentage of pairs: 53.85%
+-------------------------------------
+Trial #: 5
+Number of flushes: 25
+Number of pairs: 5388
+Percentage of flushes: 0.25%
+Percentage of pairs: 53.88%
+-------------------------------------
+Trial #: 6
+Number of flushes: 24
+Number of pairs: 5395
+Percentage of flushes: 0.24%
+Percentage of pairs: 53.95%
+-------------------------------------
+Trial #: 7
+Number of flushes: 40
+Number of pairs: 5385
+Percentage of flushes: 0.40%
+Percentage of pairs: 53.85%
+-------------------------------------
+Trial #: 8
+Number of flushes: 25
+Number of pairs: 5445
+Percentage of flushes: 0.25%
+Percentage of pairs: 54.45%
+-------------------------------------
+Trial #: 9
+Number of flushes: 30
+Number of pairs: 5386
+Percentage of flushes: 0.30%
+Percentage of pairs: 53.86%
+-------------------------------------
+Trial #: 10
+Number of flushes: 30
+Number of pairs: 5422
+Percentage of flushes: 0.30%
+Percentage of pairs: 54.22%
+
+Average percentage of flushes: 0.26%
+Average percentage of pairs: 53.93%

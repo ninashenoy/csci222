@@ -1,0 +1,28 @@
+*******************************************************************************
+Description:
+    This program demonstrates the use of namespaces. namespaces are a collection
+    of classes, functions, and variables, and group code that is
+    functionally related. We have created 2 namespaces, IntCalc and DoubleCalc.
+
+Note:
+
+    In the namespaces, In the program we have four instances of result.
+    We can differentiate it using the scope resolution operator.
+
+    The keyword extern tells the compiler that a variable is declared in another
+    source module (outside of the current scope).
+    
+    If the global variables are not externed in the .h file, the linker will
+    complain of multiple definitions.
+    If the global variables are not defined in the .cpp file, the compiler will
+    complain about undefined references
+
+    You can change the value of global variables using the scope resolution
+    operator (::)
+    example:
+    you can change the global variable result int main() by using
+        ::result = 200;
+    you can change the result variable in the IntCalc namespace by using
+        IntCalc::result = 200;
+    you can change the result variable in the DoubleCalc namespace by using
+        DoubleCalc::result = 200;

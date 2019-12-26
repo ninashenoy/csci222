@@ -1,0 +1,27 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+#ifndef _ENGINEERING_H_
+#define _ENGINEERING_H_
+
+#include "Employee.h"
+
+///////////////////////////////////////////////////////////////////////////////
+class Engineering: public Employee
+{
+private:
+    bool _Advanced;
+
+public:
+    Engineering( int rate, bool adv );
+    Engineering( const Engineering& emp );
+    ~Engineering();
+
+    virtual int ComputePay();
+    virtual void Print();
+
+};
+
+#endif

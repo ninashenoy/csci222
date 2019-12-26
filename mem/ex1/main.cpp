@@ -1,0 +1,27 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//
+///////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+#include <string.h>
+
+#include "memory.h"
+
+using namespace std;
+
+///////////////////////////////////////////////////////////////////////////////
+
+int main( int argc, char* argv[] )
+{
+    char buf[3];
+    buf[0] = '0';
+    buf[1] = 50;
+    buf[2] = 0;
+    char** pptr = 0;
+    int counter = 0;
+    input( pptr, counter );
+    output( pptr, counter );
+    release( pptr, counter );
+
+    return 0;
+}
