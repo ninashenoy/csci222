@@ -19,10 +19,10 @@ class student
     //the class. all member functions of the class have access to private
     //or any other kind of variables.
 private:
-    char _first_name[MAX_FIRST_NAME_LEN];
-    char _last_name[MAX_LAST_NAME_LEN];
-    unsigned int _id;
-    unsigned int _age;
+    char _first_name[MAX_FIRST_NAME_LEN]; //32 bytes
+    char _last_name[MAX_LAST_NAME_LEN]; //32 bytes
+    unsigned int _id; //4 bytes
+    unsigned int _age; //4 bytes
 
     //this function will set all class variables to default values
     //we dont want anybody outside the class to call this function

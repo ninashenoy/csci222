@@ -35,9 +35,10 @@ void String::print()
 {
     for( int idx = 0; idx < getLength(); idx++ )
     {
+        //print to console
         cout << buf[idx];
-        csis << buf[idx];
-        
+        //print to file
+        csis << buf[idx];    
     }
     cout << endl;
     csis << endl;
@@ -53,18 +54,37 @@ String::String()
 ///////////////////////////////////////////////////////////////////////////////
 String::String( const char* src )
 {
-    length = strlen(src) + 1;
-    buf = new char[length];
-    strcpy( buf, src );
+    // check for null before you check for length
+    if( src != nullptr && strlen(src) > 0 )
+    {
+        length = strlen(src) + 1;
+        buf = new char[length];
+        strcpy( buf, src );
+    }
+    else
+    {
+        length = 0;
+        buf = nullptr;
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 String::String( char src )
 {
-    length = 2;
-    buf = new char[length];
-    buf[0] = src;
-    buf[1] = '\0';
+    if( src != '\0' )
+    {
+        length = 2;
+        buf = new char[length];
+        buf[0] = src;
+        buf[1] = '\0';
+    }
+    else
+    {
+        length = 0;
+        buf = nullptr; 
+    }
+    
+    
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -111,10 +131,14 @@ String::~String()
         delete [] buf;
         buf = nullptr;
     }
+    length = 0;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-String& String::operator= ( const String& src )
+// Here you return a reference because you are assigning a value.
+// This allows you to perform an operation a = b = c, where c is assigned to b
+// and b is assigned to a.
+const String& String::operator= ( const String& src )
 {
     char* new_buf = new char[src.length];
     strcpy( new_buf, src.buf );
@@ -126,7 +150,7 @@ String& String::operator= ( const String& src )
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-String& String::operator= ( const char* src )
+const String& String::operator= ( const char* src )
 {
     reset();
     // assert?
@@ -158,7 +182,7 @@ String operator+ ( const String& s1, const String& s2 )
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-String& String::operator+= ( const String& src )
+const String& String::operator+= ( const String& src )
 {
     int new_length = getLength() + src.getLength() + 1;
     char* new_buf = new char[ new_length ];
@@ -180,26 +204,6 @@ String& String::operator+= ( const String& src )
     return *this;
 }
 
-///////////////////////////////////////////////////////////////////////////////
-String String::operator+ () const
-{
-    String temp;
-   
-    temp.length = length;
-    temp.buf = new char[length];
-    for( int i = 0; i < length; i++ )
-    {
-        if( buf[i] >= 97 && buf[i] <= 122 )
-        {
-            temp.buf[i] = buf[i]-32;
-        }
-        else
-        {
-            temp.buf[i] = buf[i];
-        }
-    }
-    return temp;
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 int operator== ( const String& s1, const String& s2 )
@@ -290,27 +294,14 @@ int operator>= ( const String& s1, const String& s2)
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+// Here, you return a reference because you are assigning a value
+// For example, s0 = 'C'. The character 'C' needs to go to &0 of the char buffer
 char& String::operator[] ( int index )
 {
     // assert
     return buf[index];
 }
 
-///////////////////////////////////////////////////////////////////////////////
-char* operator+ ( const String& src, int i )
-{
-    char* cptr = nullptr;
-    cptr = &src.buf[i];
-    return cptr;
-}
-
-///////////////////////////////////////////////////////////////////////////////
-char* operator+ ( int i, const String& src )
-{
-    char* cptr = nullptr;
-    cptr = &src.buf[i];
-    return cptr;
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 String operator+ ( const String& src, char ch )
@@ -341,45 +332,7 @@ String operator+ (const String& src, const char* p)
 }
 
 
-///////////////////////////////////////////////////////////////////////////////
-String& String::operator++ ()
-{
-    for( int i = 0; i < getLength(); i++ )
-    {
-        ++buf[i];
-    }
-    return *this;
-}
 
-///////////////////////////////////////////////////////////////////////////////
-String& String::operator-- ()
-{
-    for( int i = 0; i < getLength(); i++ )
-    {
-        --buf[i];
-    }
-    return *this;
-}
-
-///////////////////////////////////////////////////////////////////////////////
-String& String::operator++ (int)
-{
-    for( int i = 0; i < getLength(); i++ )
-    {
-        buf[i]++;
-    }
-    return *this;
-}
-
-///////////////////////////////////////////////////////////////////////////////
-String& String::operator-- (int)
-{
-    for( int i = 0; i < getLength(); i++ )
-    {
-        buf[i]--;
-    }
-    return *this;
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 String String::substr( int idx1, int idx2 )

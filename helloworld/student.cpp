@@ -18,7 +18,7 @@ student::student( const char* first_name,
                     unsigned int id,
                     unsigned int age )
 {
-    //first, let us use set_defaults set every character in the first name buffer with null 
+    //first, let us use set_defaults to set every character in the first name buffer with null 
     //sizeof(_first_name) will return the length of the buffer, which is 32
     //strlen(_first_name) will return 0 because it will count the number
     //of characters until it hits null character

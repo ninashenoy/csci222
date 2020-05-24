@@ -5,7 +5,7 @@
 
 2. Testing S2: String one arg (char *) ctor.
 
-ABC
+Leo
 
 
 3. Testing S3: String one arg (char) ctor.
@@ -58,13 +58,6 @@ ABCDABCD
 BCD
 
 
-12. Testing S12, T12: String unary operator.
-
-Unary +
-UNARY +
-UNARY +
-
-
 13. Testing S13, T13: String comparison operators.
 
 ABC
@@ -83,48 +76,14 @@ ABCD
 D,,!jt!gvo/
 
 
-15. Testing S15: Pointer notation.
-
-BCDEF
-
-
-16. Testing S16, T16, U16, V16, W16, X16, Y16, Z16: Increment and decrement operators.
-
-BCD
-BCD
-BCD
-BCD
-@AB
-@AB
-@AB
-@AB
-
-
 17. Testing S17, T17: Substr function.
 
 All You Need Is Love
-You N
+You NU
 
 
 18. Testing S18, T18: Output function.
 
 Red-Green-Blue
-
-
-19. Testing S19, T19, U19: ReverseString class.
-
-Computer
-retupmoC
-Computer
-
-
-20. Testing S20, T20, U20: CaseString class.
-
-BALLOON
-balloon
-BALLOON
-balloon
-BALLOON
-balloon
 
 

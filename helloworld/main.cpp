@@ -19,8 +19,8 @@ int main( int argc, char* argv[] )
     //print the student object
     s.print();
 
-    printf( "The size of the class is %d bytes.\n", sizeof(s) );
-    printf( "The size of the class is %d bytes. \n", sizeof(student) );  
+    printf( "The size of the class is %d bytes.\n", (int)sizeof(s) );
+    printf( "The size of the class is %d bytes. \n", (int)sizeof(student) );  
 
     return 0;
 }

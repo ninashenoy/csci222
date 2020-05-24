@@ -16,8 +16,14 @@ using namespace std;
 
 ofstream csis;
 
+void test_pass_by_value(String str)
+{
+    str = "Nina";
+    str.print();
+}
+
+
 int main() {
-	
 	csis.open("csis.txt");
 	test1();
     test2();
@@ -30,15 +36,15 @@ int main() {
     test9();
     test10();
     test11();
-    test12();
+    //test12();
     test13();
     test14();
-    test15();
-    test16();
+    //test15();
+    //test16();
     test17();
     test18();
-    test19();
-    test20();
+    //test19();
+    //test20();
     csis.close();
 }
 
@@ -53,8 +59,10 @@ void test1() {
 void test2() {
     cout << "2. Testing S2: String one arg (char *) ctor." << endl << endl;
     csis << "2. Testing S2: String one arg (char *) ctor." << endl << endl;
-    String s2("ABC");
-    s2.print();
+    {
+        String s2("Leo");
+        s2.print();
+    }
     wait();
 }
 
@@ -96,6 +104,7 @@ void test7() {
     cout << "7. Testing S7, T7, U7: String assignment." << endl << endl;
     csis << "7. Testing S7, T7, U7: String assignment." << endl << endl;
     String s7("Sally Ride"), t7, u7;
+    //t7 = s7;
     t7 = u7 = s7;
     s7.print();
     t7.print();
@@ -144,17 +153,6 @@ void test11() {
     wait();
 }
 
-void test12() {
-    cout << "12. Testing S12, T12: String unary operator." << endl << endl;
-    csis << "12. Testing S12, T12: String unary operator." << endl << endl;
-    String s12("Unary +");
-    String t12(+s12);
-    s12.print();
-    t12.print();
-    s12 = +s12;
-    s12.print();
-    wait();
-}
 
 void test13() {
     cout << "13. Testing S13, T13: String comparison operators." << endl << endl;
@@ -192,45 +190,6 @@ void test14() {
     wait();
 }
 
-void test15() {
-    cout << "15. Testing S15: Pointer notation." << endl << endl;
-    csis << "15. Testing S15: Pointer notation." << endl << endl;
-    String s15("ABCDE");
-    for(int i = 0; i < s15.getLength(); i++)
-        ++(*(s15+i));
-    for (int j = 0; j < s15.getLength(); j++) {
-        cout << *(j + s15);
-        csis << *(j + s15);
-    }
-    cout << endl;
-    csis << endl;
-    wait();
-}
-
-void test16() {
-    cout << "16. Testing S16, T16, U16, V16, W16, X16, Y16, Z16: Increment and decrement operators." << endl << endl;
-    csis << "16. Testing S16, T16, U16, V16, W16, X16, Y16, Z16: Increment and decrement operators." << endl << endl;
-    String s16("ABC");
-    String t16(++s16);
-    s16.print();
-    t16.print();
-    
-    String u16("ABC");
-    String v16(u16++);
-    u16.print();
-    v16.print();
-	
-    String w16("ABC");
-    String x16(--w16);
-    w16.print();
-    x16.print();
-	
-    String y16("ABC");
-    String z16(y16--);
-    y16.print();
-    z16.print();
-    wait();
-}
 
 void test17() {
     cout << "17. Testing S17, T17: Substr function." << endl << endl;
@@ -254,7 +213,7 @@ void test18() {
     csis << endl;
     wait();
 }
-
+/*
 void test19() {
     cout << "19. Testing S19, T19, U19: ReverseString class." << endl << endl;
     csis << "19. Testing S19, T19, U19: ReverseString class." << endl << endl;
@@ -269,6 +228,7 @@ void test19() {
     wait();
 }
 
+
 void test20() {
     cout << "20. Testing S20, T20, U20: CaseString class." << endl << endl;
     csis << "20. Testing S20, T20, U20: CaseString class." << endl << endl;
@@ -282,6 +242,7 @@ void test20() {
     u20.print();
     wait();
 }
+*/
 
 void wait() {
     char buf;

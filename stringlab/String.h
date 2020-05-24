@@ -28,20 +28,13 @@ class String
         String substr( int, int );
 
 
-        String& operator= ( const String& );
-        String& operator= ( const char* );
-        String& operator+= ( const String& );
-        String operator+ () const;
-        String& operator++ ();
-        String& operator-- ();
-        String& operator++ (int);
-        String& operator-- (int);
+        const String& operator= ( const String& );
+        const String& operator= ( const char* );
+        const String& operator+= ( const String& );
+    
         char& operator[] ( int );
+        
         friend String operator+ ( const String&, const String& );
-
-        friend char* operator+ ( const String&, int );
-        friend char* operator+ ( int, const String& );
-
         friend String operator+ ( const String&, char );
         friend String operator+ ( char, const String& );
         friend String operator+ ( const String&, const char* );
